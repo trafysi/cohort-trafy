@@ -58,3 +58,4 @@
   .posts{grid-template-columns:1fr}
 }
 @media (max-width:560px){.flow{grid-template-columns:1fr}.phead{padding:44px 0 52px}}
+.post--sm .tagx,.post__body .tagx{align-self:flex-start;width:fit-content}
