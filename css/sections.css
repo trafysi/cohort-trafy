@@ -231,3 +231,39 @@
 }
 @media (max-width:560px){.mosaic{grid-template-columns:1fr}.pho--b,.pho--c{grid-column:1}.pho figcaption{max-width:none}}
 .faqcat{margin:36px 0 -8px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--pink-strong);font-weight:800}.faqcat:first-of-type{margin-top:28px}
+
+/* ===== mobile polish ===== */
+@media (max-width:640px){
+  body{padding-bottom:84px}
+  /* photo mosaic: image on top, caption below, never wider than the screen */
+  .mosaic{grid-template-columns:minmax(0,1fr);gap:16px}
+  .pho,.pho--a,.pho--b,.pho--c,.pho--d{grid-column:1/-1!important;grid-row:auto!important;min-height:0;display:flex;flex-direction:column;background:#fff;border:1px solid var(--line)}
+  .pho::after{display:none}
+  .pho img{position:static;height:190px;width:100%}
+  .pho figcaption{position:static;max-width:none;border-radius:0;box-shadow:none;background:#fff;padding:14px 18px 18px;backdrop-filter:none}
+  .pho:hover figcaption{transform:none}
+  .score{padding:14px}
+  /* tool grid: two compact columns */
+  .stack{grid-template-columns:1fr 1fr;gap:10px}
+  .tool{flex-direction:column;align-items:flex-start;gap:10px;padding:14px}
+  .tool b{font-size:15px}.tool small{font-size:10.5px}
+  /* hero stage: chat sits below the code window, no overlap */
+  .stage{height:440px}
+  .px.win-px{top:8%}
+  .px.chat-px{bottom:0}
+  .px:has(.chip--ok){display:none}
+  .chat{padding:12px}.bub{font-size:12.5px}
+  .cur__bar{align-items:flex-start}
+  .cur__actions{width:100%;justify-content:space-between}
+  .opps article,.perk{padding:22px}
+  .final{padding:64px 0}
+  .final h2{font-size:28px}
+  .foot__links{gap:8px 16px}
+}
+.modal legend{float:none;width:100%;margin:0 0 8px;padding:0}
+.modal fieldset{gap:8px 24px}
+@media (max-width:640px){.modal__form h2{font-size:22px;line-height:1.25;padding-right:36px}.modal__box{border-radius:22px}}
+.foot__links{display:flex;flex-wrap:wrap;gap:6px 22px;justify-content:center;font-size:14px;font-weight:600}
+.foot__links a{text-decoration:none;color:var(--mute)}.foot__links a:hover{color:var(--ink)}
+.final h2{line-height:1.15}
+.foot__in{padding-bottom:8px}

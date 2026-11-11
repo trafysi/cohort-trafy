@@ -89,3 +89,26 @@
   .win__code .ln,.bub,.chip--ok,.bub--ai .txt{clip-path:none!important;opacity:1!important;transform:none!important}
   .dots{display:none}.rot>span{filter:none}.rot>span:not(.is-on){display:none}
 }
+
+/* ===== mobile fixes (must come after the desktop rules above) ===== */
+@media (max-width:960px){
+  .hero__grid{grid-template-columns:1fr;gap:28px}
+  .hero{padding:40px 0 64px}
+}
+@media (max-width:640px){
+  .hero h1{font-size:clamp(34px,10.5vw,46px)}
+  .lead{font-size:16.5px}
+  .tag{font-size:10.5px;letter-spacing:.1em;padding:7px 12px;line-height:1.35}
+  .hero__cta{flex-direction:column;align-items:stretch}.hero__cta .btn{width:100%}
+  .hstats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}.hstats div{min-width:0;padding:10px 6px;text-align:center}
+  .hstats dt{font-size:22px}.hstats dd{font-size:11px}
+  .stage{height:380px;max-width:none}
+  .px.win-px{left:0;top:6%;width:96%}.px.chat-px{width:88%;right:0}
+  .px:has(.chip--a){left:auto!important;right:0;top:-2%!important}
+  .px:has(.chip--b){left:0!important;top:-4%!important}
+  .px:has(.chip--ok){left:0!important;top:84%!important}
+  .px:has(.orb){display:none}
+  .chip{font-size:12px;padding:7px 12px}
+  .win__code{font-size:11px;line-height:1.65;padding:12px 12px 16px}
+}
+.hstats{margin-top:24px}
