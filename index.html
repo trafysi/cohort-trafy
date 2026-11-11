@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trafy AI Engineer Cohort | 8 weeks, 32+ live hours, 5 real builds</title>
+<meta name="description" content="Go from your first line of Python to a deployed AI application. 32+ hours of live teaching, 4 projects and an individual capstone. No coding experience needed.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Trafy">
+<meta property="og:title" content="Trafy AI Engineer Cohort">
+<meta property="og:description" content="32+ live hours, 4 projects and an individual capstone. Learn. Build. Execute. Get Discovered.">
+<meta property="og:image" content="https://trafy.si/cohort/assets/img/og-image.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/cohort/assets/img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="64x64" href="/cohort/assets/img/favicon-64.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400..800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/cohort/css/cohort.css">
+<link rel="stylesheet" href="/cohort/css/hero.css">
+<link rel="stylesheet" href="/cohort/css/sections.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+
+<div class="strip">Applications open &middot; Limited seats &middot; <button type="button" data-open-lead>Download the curriculum</button></div>
+
+<header class="nav" id="nav">
+  <div class="wrap nav__in">
+    <a href="/cohort/" class="nav__logo"><img src="/cohort/assets/img/trafy-logo-ink.png" alt="Trafy"></a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#curriculum">Curriculum</a>
+      <a href="#projects">Projects</a>
+      <a href="#perks">What you get</a>
+      <a href="#outcomes">Outcomes</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="nav__cta">
+      <button type="button" class="btn btn--ghost btn--sm" data-open-lead>Download Curriculum</button>
+      <a href="#apply" class="btn btn--solid btn--sm">Apply Now</a>
+    </div>
+  </div>
+  <div class="progress" id="progress"></div>
+</header>
+
+<main id="main">
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="blobs" aria-hidden="true"><i data-depth="-1.2"></i><i data-depth="1.6"></i><i data-depth="-.8"></i></div>
+  <div class="wrap hero__grid">
+    <div class="hero__copy">
+      <p class="eyebrow tag"><span class="tag__dot"></span>Trafy AI Engineer Cohort &middot; Applications open</p>
+      <h1>Stop watching tutorials.<br>Start shipping<br><span class="rot" id="rot" aria-label="AI products"><span class="is-on">AI products.</span><span>chatbots.</span><span>RAG apps.</span><span>AI agents.</span></span></h1>
+      <p class="lead">An intensive 8-week programme that takes you from your first line of Python to a deployed AI application. You won&rsquo;t just sit and learn. You&rsquo;ll build four projects and an individual capstone, live, with instructors.</p>
+      <div class="hero__cta">
+        <a href="#apply" class="btn btn--solid btn--lg magnet">Apply to the Cohort</a>
+        <button type="button" class="btn btn--ghost btn--lg magnet" data-open-lead>Download Curriculum <span aria-hidden="true">&darr;</span></button>
+      </div>
+      <p class="hero__note">No coding experience required. Starts from Python fundamentals.</p>
+      <dl class="hstats">
+        <div><dt data-count="32" data-suffix="+">32+</dt><dd>live hours</dd></div>
+        <div><dt data-count="5">5</dt><dd>real builds</dd></div>
+        <div><dt data-count="16">16</dt><dd>live classes</dd></div>
+        <div><dt data-count="8">8</dt><dd>weeks</dd></div>
+      </dl>
+    </div>
+
+    <div class="stage" id="stage" aria-hidden="true">
+      <div class="px glow-px" data-depth="-.6"><div class="stage__glow"></div></div>
+
+      <div class="px win-px" data-depth="1">
+        <div class="win float" style="--fd:0s">
+          <div class="win__bar"><i></i><i></i><i></i><span>week4_chatbot.py</span></div>
+          <pre class="win__code" id="code">
+<span class="ln"><b class="c">#</b> <b class="c">your first AI chatbot</b></span>
+<span class="ln"><b class="k">from</b> trafy <b class="k">import</b> llm</span>
+<span class="ln"> </span>
+<span class="ln"><b class="k">def</b> <b class="f">ask</b>(prompt):</span>
+<span class="ln">    reply = llm.<b class="f">chat</b>(prompt)</span>
+<span class="ln">    <b class="k">return</b> reply.text</span>
+<span class="ln"> </span>
+<span class="ln"><b class="f">print</b>(<b class="f">ask</b>(<b class="s">"Hello, AI!"</b>))<i class="caret"></i></span></pre>
+        </div>
+      </div>
+
+      <div class="px chat-px" data-depth="1.7">
+        <div class="chat float" style="--fd:-2s" id="chat">
+          <div class="bub bub--me" id="bMe">Summarise this PDF for me</div>
+          <div class="bub bub--ai" id="bAi"><span class="dots" id="dots"><i></i><i></i><i></i></span><span class="txt" id="aiTxt">Done. 3 key points, with sources. &check;</span></div>
+        </div>
+      </div>
+
+      <div class="px" data-depth="2.4" style="--x:-4%;--y:78%"><div class="chip chip--ok float" style="--fd:-1s" id="deploy"><i></i>Deployed &middot; live</div></div>
+      <div class="px" data-depth="2.9" style="--x:84%;--y:4%"><div class="chip chip--a float" style="--fd:-3s"><b>32+</b> live hours</div></div>
+      <div class="px" data-depth="2.2" style="--x:-6%;--y:-4%"><div class="chip chip--b float" style="--fd:-4s"><b>4</b> projects + capstone</div></div>
+
+      <div class="px" data-depth="3.2" style="--x:90%;--y:46%"><div class="orb float" style="--fd:-1.5s"><img src="https://cdn.simpleicons.org/python" alt="" onerror="this.remove()"></div></div>
+      <div class="px" data-depth="2.6" style="--x:52%;--y:92%"><div class="orb float" style="--fd:-2.5s"><img src="https://cdn.simpleicons.org/fastapi" alt="" onerror="this.remove()"></div></div>
+      <div class="px" data-depth="3.6" style="--x:20%;--y:-4%"><div class="orb orb--sm float" style="--fd:-.5s"><img src="https://cdn.simpleicons.org/langchain" alt="" onerror="this.remove()"></div></div>
+      <div class="px" data-depth="2.8" style="--x:60%;--y:-6%"><div class="orb orb--sm float" style="--fd:-3.5s"><img src="https://cdn.simpleicons.org/github" alt="" onerror="this.remove()"></div></div>
+    </div>
+  </div>
+  <a class="scrollcue" href="#projects" aria-label="Scroll to learn more"><i></i></a>
+</section>
+
+<!-- PROOF OVER POLISH -->
+<section class="band">
+  <div class="wrap band__grid">
+    <p class="band__quote">&ldquo;Learning should not end with attending classes. It should lead to <em>building, execution and opportunities.</em>&rdquo;</p>
+    <ul class="band__list">
+      <li><b>Structured</b> technical learning</li>
+      <li><b>Hands-on</b> implementation from week 4</li>
+      <li><b>Individual</b> capstone you present</li>
+      <li><b>Discovered</b> through Trafy&rsquo;s network</li>
+    </ul>
+  </div>
+</section>
+
+<!-- BUILD LADDER -->
+<section class="sec" id="projects">
+  <div class="wrap">
+    <p class="eyebrow eyebrow--c">Not a lecture series</p>
+    <h2 class="h2 h2--c">Four weeks of learning. Then you <em>build every week.</em></h2>
+    <p class="sub sub--c">You begin implementing from Week 4. Each project builds on the last, so you finish with a portfolio, not just notes and a certificate.</p>
+    <ol class="ladder">
+      <li><span class="ladder__wk">Week 4</span><h3>AI Chatbot</h3><p>LLMs, prompt engineering, APIs</p></li>
+      <li><span class="ladder__wk">Week 5</span><h3>Full-Stack AI Application</h3><p>FastAPI, databases, Streamlit</p></li>
+      <li><span class="ladder__wk">Week 6</span><h3>AI Knowledge Assistant</h3><p>Embeddings, vector databases, RAG</p></li>
+      <li class="ladder__cap"><span class="ladder__wk">Weeks 7&ndash;8</span><h3>Individual Capstone</h3><p>Your own AI product, deployed and presented</p></li>
+    </ol>
+    <div class="ideas">
+      <p><strong>Capstone ideas:</strong> AI Resume Analyzer &middot; AI Study Companion &middot; AI Customer Support Assistant &middot; AI Personal Finance Assistant &middot; AI Research Assistant &middot; AI Document Intelligence System &middot; AI Workflow Automation App. Or propose your own, with mentor approval.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CURRICULUM -->
+<section class="sec sec--tint" id="curriculum">
+  <div class="wrap">
+    <p class="eyebrow eyebrow--c">The curriculum</p>
+    <h2 class="h2 h2--c">8 phases. 16 classes. <em>One working AI app.</em></h2>
+    <p class="sub sub--c">Open any phase to see every class, topic and practical.</p>
+    <div class="cur__bar">
+      <div class="cur__chips" aria-hidden="true">
+        <span>Python</span><span>Data</span><span>Machine Learning</span><span>LLMs</span><span>Full-Stack AI</span><span>RAG</span><span>Agents</span><span>Deploy</span>
+      </div>
+      <div class="cur__actions">
+        <button type="button" class="link" id="toggleAll">Expand all</button>
+        <button type="button" class="btn btn--solid btn--sm" data-open-lead>Download full curriculum (PDF)</button>
+      </div>
+    </div>
+    <div class="phases">
+
+        <details class="phase" open>
+          <summary>
+            <span class="phase__num">01</span>
+            <span class="phase__head"><strong>Programming Foundations</strong><small>Week 1 &middot; Classes 01 &amp; 02 &middot; 4 live hours</small></span>
+            
+            <span class="phase__chev" aria-hidden="true"></span>
+          </summary>
+          <div class="phase__body">
+            <div class="classes">
+              <article class="class">
+                <p class="class__no">Class 01 &middot; 2 hours live</p>
+                <h4>Introduction to AI Engineering</h4>
+                <ul class="ticks"><li>Introduction to Artificial Intelligence</li><li>AI vs Machine Learning vs Deep Learning</li><li>Introduction to Generative AI</li><li>What does an AI Engineer do?</li><li>How modern AI applications work</li><li>Introduction to Large Language Models</li><li>Understanding the AI engineering ecosystem</li><li>Setting up Python, VS Code, Google Colab and GitHub</li></ul>
+                <p class="class__build"><b>You build:</b> Build your first simple AI-powered application</p>
+              </article>
+              <article class="class">
+                <p class="class__no">Class 02 &middot; 2 hours live</p>
+                <h4>Python Fundamentals, Part 1</h4>
+                <ul class="ticks"><li>Introduction to Python</li><li>Variables and data types</li><li>Operators and expressions</li><li>Input and output</li><li>Conditional statements</li><li>Loops and iterations</li><li>Writing basic Python programmes</li></ul>
+                <p class="class__build"><b>You build:</b> Build a calculator and a number-guessing application</p>
+              </article>
+            </div>
+            
+          </div>
+        </details>
+        <details class="phase">
+          <summary>
+            <span class="phase__num">02</span>
+            <span class="phase__head"><strong>Python and Data Handling</strong><small>Week 2 &middot; Classes 03 &amp; 04 &middot; 4 live hours</small></span>
+            
+            <span class="phase__chev" aria-hidden="true"></span>
+          </summary>
+          <div class="phase__body">
+            <div class="classes">
+              <article class="class">
+                <p class="class__no">Class 03 &middot; 2 hours live</p>
+                <h4>Python Fundamentals, Part 2</h4>
+                <ul class="ticks"><li>Functions and reusable code</li><li>Lists, tuples, dictionaries and sets</li><li>String manipulation</li><li>File handling</li><li>Exception handling</li><li>Modules and packages</li><li>Virtual environments</li></ul>
+                <p class="class__build"><b>You build:</b> Build a Python-based file-processing application</p>
+              </article>
+              <article class="class">
+                <p class="class__no">Class 04 &middot; 2 hours live</p>
+                <h4>Python for Data Science</h4>
+                <ul class="ticks"><li>Introduction to data analysis</li><li>NumPy fundamentals</li><li>Pandas fundamentals</li><li>Reading and processing CSV files</li><li>Data cleaning</li><li>Missing values and duplicates</li><li>Data manipulation</li><li>Introduction to Matplotlib</li><li>Basic data visualisation</li></ul>
+                <p class="class__build"><b>You build:</b> Analyse and visualise a real-world dataset</p>
+              </article>
+            </div>
+            
+          </div>
+        </details>
+        <details class="phase">
+          <summary>
+            <span class="phase__num">03</span>
+            <span class="phase__head"><strong>Machine Learning Foundations</strong><small>Week 3 &middot; Classes 05 &amp; 06 &middot; 4 live hours</small></span>
+            
+            <span class="phase__chev" aria-hidden="true"></span>
+          </summary>
+          <div class="phase__body">
+            <div class="classes">
+              <article class="class">
+                <p class="class__no">Class 05 &middot; 2 hours live</p>
+                <h4>Introduction to Machine Learning</h4>
+                <ul class="ticks"><li>What is Machine Learning?</li><li>How machines learn from data</li><li>Supervised and unsupervised learning</li><li>Features and labels</li><li>Training and testing datasets</li><li>Regression and classification</li><li>Introduction to model evaluation</li></ul>
+                
+              </article>
+              <article class="class">
+                <p class="class__no">Class 06 &middot; 2 hours live</p>
+                <h4>Building Machine Learning Models</h4>
+                <ul class="ticks"><li>Introduction to Scikit-learn</li><li>Linear regression</li><li>Classification models</li><li>Decision trees</li><li>Model training and prediction</li><li>Accuracy, precision and recall</li><li>Model evaluation</li></ul>
+                <p class="class__build"><b>You build:</b> Build a basic prediction model (project preparation)</p>
+              </article>
+            </div>
+            
+          </div>
+        </details>
+        <details class="phase">
+          <summary>
+            <span class="phase__num">04</span>
+            <span class="phase__head"><strong>Generative AI and LLM Engineering</strong><small>Week 4 &middot; Classes 07 &amp; 08 &middot; 4 live hours</small></span>
+            <span class="phase__tag">Project 1</span>
+            <span class="phase__chev" aria-hidden="true"></span>
+          </summary>
+          <div class="phase__body">
+            <div class="classes">
+              <article class="class">
+                <p class="class__no">Class 07 &middot; 2 hours live</p>
+                <h4>Generative AI and Large Language Models</h4>
+                <ul class="ticks"><li>Introduction to Generative AI</li><li>Understanding Large Language Models</li><li>How LLMs work</li><li>Transformers and attention mechanisms (conceptual)</li><li>Tokens and context windows</li><li>Embeddings and vector representations</li><li>Model providers and inference</li><li>Understanding hallucinations and limitations</li></ul>
+                
+              </article>
+              <article class="class">
+                <p class="class__no">Class 08 &middot; 2 hours live</p>
+                <h4>Prompt Engineering and LLM APIs</h4>
+                <ul class="ticks"><li>Fundamentals of prompt engineering</li><li>System and user prompts</li><li>Zero-shot and few-shot prompting</li><li>Structured outputs and JSON responses</li><li>Connecting LLMs through APIs</li><li>API keys and environment variables</li><li>Error handling</li><li>Streaming responses</li></ul>
+                
+              </article>
+            </div>
+            <div class="projectbox"><span>Project 1</span><div><strong>Build an AI Chatbot</strong><p>Build an AI-powered chatbot using an LLM API and apply prompt engineering techniques.</p></div></div>
+          </div>
+        </details>
+        <details class="phase">
+          <summary>
+            <span class="phase__num">05</span>
+            <span class="phase__head"><strong>AI Application Development</strong><small>Week 5 &middot; Classes 09 &amp; 10 &middot; 4 live hours</small></span>
+            <span class="phase__tag">Project 2</span>
+            <span class="phase__chev" aria-hidden="true"></span>
+          </summary>
+          <div class="phase__body">
+            <div class="classes">
+              <article class="class">
+                <p class="class__no">Class 09 &middot; 2 hours live</p>
+                <h4>Backend Development with FastAPI</h4>
+                <ul class="ticks"><li>Frontend and backend architecture</li><li>Introduction to APIs</li><li>REST API fundamentals</li><li>HTTP methods and status codes</li><li>Requests and responses</li><li>Building APIs using FastAPI</li><li>Pydantic and data validation</li><li>Connecting LLMs to backend applications</li><li>Testing APIs using Swagger UI</li></ul>
+                
+              </article>
+              <article class="class">
+                <p class="class__no">Class 10 &middot; 2 hours live</p>
+                <h4>Databases and AI Interfaces</h4>
+                <ul class="ticks"><li>Database fundamentals</li><li>Introduction to SQL</li><li>PostgreSQL basics</li><li>Storing and retrieving application data</li><li>Introduction to Streamlit</li><li>Connecting frontend interfaces with backend APIs</li><li>Building interactive applications</li><li>Storing conversation history</li></ul>
+                
+              </article>
+            </div>
+            <div class="projectbox"><span>Project 2</span><div><strong>Build a Full-Stack AI Application</strong><p>Build an AI application with a user interface, backend API and database integration.</p></div></div>
+          </div>
+        </details>
+        <details class="phase">
+          <summary>
+            <span class="phase__num">06</span>
+            <span class="phase__head"><strong>RAG and Knowledge-Based AI</strong><small>Week 6 &middot; Classes 11 &amp; 12 &middot; 4 live hours</small></span>
+            <span class="phase__tag">Project 3</span>
+            <span class="phase__chev" aria-hidden="true"></span>
+          </summary>
+          <div class="phase__body">
+            <div class="classes">
+              <article class="class">
+                <p class="class__no">Class 11 &middot; 2 hours live</p>
+                <h4>Embeddings and Vector Databases</h4>
+                <ul class="ticks"><li>What are embeddings?</li><li>Semantic search vs keyword search</li><li>Vector similarity</li><li>Cosine similarity</li><li>Document chunking</li><li>Embedding generation</li><li>Introduction to FAISS and ChromaDB</li><li>Storing and retrieving vector representations</li></ul>
+                
+              </article>
+              <article class="class">
+                <p class="class__no">Class 12 &middot; 2 hours live</p>
+                <h4>Retrieval-Augmented Generation (RAG)</h4>
+                <ul class="ticks"><li>What is RAG?</li><li>Why do AI applications need RAG?</li><li>RAG architecture</li><li>Document ingestion</li><li>Retrieval and context construction</li><li>Connecting retrieved information to LLMs</li><li>Introduction to LangChain</li><li>Source references and reducing hallucinations</li></ul>
+                
+              </article>
+            </div>
+            <div class="projectbox"><span>Project 3</span><div><strong>Build an AI Knowledge Assistant</strong><p>Build a document-based AI assistant that processes uploaded documents and answers questions using RAG.</p></div></div>
+          </div>
+        </details>
+        <details class="phase">
+          <summary>
+            <span class="phase__num">07</span>
+            <span class="phase__head"><strong>AI Agents and Automation</strong><small>Week 7 &middot; Classes 13 &amp; 14 &middot; 4 live hours</small></span>
+            <span class="phase__tag">Capstone</span>
+            <span class="phase__chev" aria-hidden="true"></span>
+          </summary>
+          <div class="phase__body">
+            <div class="classes">
+              <article class="class">
+                <p class="class__no">Class 13 &middot; 2 hours live</p>
+                <h4>AI Agents and Tool Calling</h4>
+                <ul class="ticks"><li>What are AI agents?</li><li>Chatbots vs AI agents</li><li>Function calling and tool calling</li><li>Connecting external APIs</li><li>Giving AI access to tools</li><li>Multi-step task execution</li><li>Agent memory and state</li><li>Understanding agent limitations</li></ul>
+                
+              </article>
+              <article class="class">
+                <p class="class__no">Class 14 &middot; 2 hours live</p>
+                <h4>AI Workflows and Automation</h4>
+                <ul class="ticks"><li>AI-powered workflows</li><li>Sequential and conditional workflows</li><li>Multi-step automation</li><li>Introduction to LangGraph</li><li>Human-in-the-loop systems</li><li>Workflow reliability</li><li>Error handling and execution</li></ul>
+                
+              </article>
+            </div>
+            <div class="projectbox"><span>Capstone</span><div><strong>Capstone development begins</strong><p>Identify a real-world problem and begin designing your own AI application.</p></div></div>
+          </div>
+        </details>
+        <details class="phase">
+          <summary>
+            <span class="phase__num">08</span>
+            <span class="phase__head"><strong>Deployment and Capstone Execution</strong><small>Week 8 &middot; Classes 15 &amp; 16 &middot; 4 live hours</small></span>
+            <span class="phase__tag">Capstone</span>
+            <span class="phase__chev" aria-hidden="true"></span>
+          </summary>
+          <div class="phase__body">
+            <div class="classes">
+              <article class="class">
+                <p class="class__no">Class 15 &middot; 2 hours live</p>
+                <h4>Deployment and Production Fundamentals</h4>
+                <ul class="ticks"><li>Local development vs production</li><li>Git and GitHub, version control</li><li>Environment variables</li><li>API security fundamentals</li><li>Deploying AI applications</li><li>Cloud hosting fundamentals</li><li>Testing and debugging</li><li>Logging and monitoring</li><li>Token and cost optimisation</li></ul>
+                
+              </article>
+              <article class="class">
+                <p class="class__no">Class 16 &middot; 2 hours live</p>
+                <h4>Capstone Presentation and Evaluation</h4>
+                <ul class="ticks"><li>Final application demonstration</li><li>Application architecture explanation</li><li>Project documentation</li><li>GitHub repository presentation</li><li>Deployment demonstration</li><li>Technical feedback</li><li>Portfolio development</li><li>Showcasing projects on Trafy</li></ul>
+                
+              </article>
+            </div>
+            <div class="projectbox"><span>Capstone</span><div><strong>Final deliverable</strong><p>An individual, working AI application, presented by you.</p></div></div>
+          </div>
+        </details>
+    </div>
+  </div>
+</section>
+
+<!-- FREE PERKS -->
+<section class="sec" id="perks">
+  <div class="wrap">
+    <p class="eyebrow eyebrow--c">Included with your cohort</p>
+    <h2 class="h2 h2--c">So much more, <em>free.</em></h2>
+    <p class="sub sub--c">Your cohort seat comes with access to the Trafy platform, not just the classroom.</p>
+    <div class="perks">
+      <article class="perk perk--hero">
+        <span class="perk__badge">Free access</span>
+        <h3>30+ free courses on the Trafy app</h3>
+        <p>Learn alongside the live classes with free access to 30+ courses on the Trafy app, at no extra cost.</p>
+      </article>
+      <article class="perk perk--hero">
+        <span class="perk__badge">Free access</span>
+        <h3>Employability Index test</h3>
+        <p>Take the Trafy Employability Index test and get a verified score you can show to employers.</p>
+      </article>
+      <article class="perk">
+        <h3>A professional Trafy profile</h3>
+        <p>Showcase your projects and progress to students, professionals, founders and recruiters on Trafy.</p>
+      </article>
+      <article class="perk">
+        <h3>A GitHub portfolio</h3>
+        <p>Four practical projects and an individual capstone, all in repositories you can present.</p>
+      </article>
+      <article class="perk">
+        <h3>Real product exposure</h3>
+        <p>Contribute to Trafy&rsquo;s social networking platform and see how real products are built.</p>
+      </article>
+      <article class="perk">
+        <h3>Presentation experience</h3>
+        <p>Demo your architecture, code and deployment, and get technical feedback from instructors.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT RUNS -->
+<section class="sec sec--pastel" id="platform">
+  <div class="wrap">
+    <p class="eyebrow eyebrow--c">How the cohort runs</p>
+    <h2 class="h2 h2--c">An intensive platform, <em>built around execution.</em></h2>
+    <div class="mosaic"><figure class="pho pho--a"><img src="/cohort/assets/img/challenge-class-saas.webp" alt="A live Trafy class on building AI SaaS, with the instructor presenting and students on video" loading="lazy"><figcaption><span class="pho__n">01</span><h3>Live classes every week</h3><p>Two hours each, instructor-led, with a practical in nearly every class.</p></figcaption></figure><figure class="pho pho--b"><img src="/cohort/assets/img/challenge-10k-build.webp" alt="Trafy students building projects together on laptops" loading="lazy"><figcaption><span class="pho__n">02</span><h3>Build alongside your peers</h3><p>Weekly assignments and GitHub commits are proof of real technical work.</p></figcaption></figure><figure class="pho pho--c"><img src="/cohort/assets/img/ts-mentoring.webp" alt="A Trafy mentor at a whiteboard explaining an AI architecture to two students" loading="lazy"><figcaption><span class="pho__n">03</span><h3>Feedback from mentors</h3><p>Talk through your architecture and get technical feedback on your capstone.</p></figcaption></figure><figure class="pho pho--d"><img src="/cohort/assets/img/pitch-2.webp" alt="Trafy students presenting their AI product to an audience" loading="lazy"><figcaption><span class="pho__n">04</span><h3>Present what you built</h3><p>Demo your app, your repository and your deployment in the final class.</p></figcaption></figure></div>
+    <div class="score"><strong>Capstone scorecard</strong><ul><li>AI implementation <b>25%</b></li><li>Backend and functionality <b>20%</b></li><li>Application architecture <b>15%</b></li><li>Deployment and testing <b>15%</b></li><li>Documentation and presentation <b>15%</b></li><li>Problem identification <b>10%</b></li></ul></div></div>
+</section>
+
+<!-- STACK -->
+<section class="sec">
+  <div class="wrap">
+    <p class="eyebrow eyebrow--c">The stack</p>
+    <h2 class="h2 h2--c">Tools you&rsquo;ll actually <em>use.</em></h2>
+    <p class="sub sub--c">The emphasis is on implementing these technologies, not memorising their definitions.</p>
+    <div class="marquee" id="marquee" aria-hidden="true"><div class="marquee__track"></div></div>
+    <div class="stack">
+      <div class="tool"><span class="tool__logo"><img src="https://cdn.simpleicons.org/python" alt="" loading="lazy" onerror="this.parentNode.classList.add('mono');this.remove()"><em class="tool__mono">P</em></span><div><b>Python</b><small>Programming</small></div></div>
+      <div class="tool"><span class="tool__logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" alt="" loading="lazy" onerror="this.parentNode.classList.add('mono');this.remove()"><em class="tool__mono">V</em></span><div><b>VS Code</b><small>Environment</small></div></div>
+      <div class="tool"><span class="tool__logo"><img src="https://cdn.simpleicons.org/googlecolab" alt="" loading="lazy" onerror="this.parentNode.classList.add('mono');this.remove()"><em class="tool__mono">G</em></span><div><b>Google Colab</b><small>Environment</small></div></div>
+      <div class="tool"><span class="tool__logo"><img src="https://cdn.simpleicons.org/numpy" alt="" loading="lazy" onerror="this.parentNode.classList.add('mono');this.remove()"><em class="tool__mono">N</em></span><div><b>NumPy</b><small>Data analysis</small></div></div>
+      <div class="tool"><span class="tool__logo"><img src="https://cdn.simpleicons.org/pandas" alt="" loading="lazy" onerror="this.parentNode.classList.add('mono');this.remove()"><em class="tool__mono">P</em></span><div><b>Pandas</b><small>Data analysis</small></div></div>
+      <div class="tool"><span class="tool__logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/matplotlib/matplotlib-original.svg" alt="" loading="lazy" onerror="this.parentNode.classList.add('mono');this.remove()"><em class="tool__mono">M</em></span><div><b>Matplotlib</b><small>Data analysis</small></div></div>
+      <div class="tool"><span class="tool__logo"><img src="https://cdn.simpleicons.org/scikitlearn" alt="" loading="lazy" onerror="this.parentNode.classList.add('mono');this.remove()"><em class="tool__mono">S</em></span><div><b>Scikit-learn</b><small>Machine learning</small></div></div>
+      <div class="tool"><span class="tool__logo tool__logo--duo"><img class="duo1" src="https://unpkg.com/@lobehub/icons-static-svg@latest/icons/openai.svg" alt=""><img class="duo2" src="https://unpkg.com/@lobehub/icons-static-svg@latest/icons/claude-color.svg" alt=""></span><div><b>LLM APIs</b><small>LLM integration</small></div></div>
+      <div class="tool"><span class="tool__logo tool__logo--svg"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#0F6B63" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M8 7L3 12l5 5"/><path d="M16 7l5 5-5 5"/><path d="M13.5 5l-3 14"/></svg></span><div><b>REST APIs</b><small>Backend</small></div></div>
+      <div class="tool"><span class="tool__logo"><img src="https://cdn.simpleicons.org/fastapi" alt="" loading="lazy" onerror="this.parentNode.classList.add('mono');this.remove()"><em class="tool__mono">F</em></span><div><b>FastAPI</b><small>Backend</small></div></div>
+      <div class="tool"><span class="tool__logo"><img src="https://cdn.simpleicons.org/streamlit" alt="" loading="lazy" onerror="this.parentNode.classList.add('mono');this.remove()"><em class="tool__mono">S</em></span><div><b>Streamlit</b><small>Frontend</small></div></div>
+      <div class="tool"><span class="tool__logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" alt="" loading="lazy" onerror="this.parentNode.classList.add('mono');this.remove()"><em class="tool__mono">S</em></span><div><b>SQL</b><small>Databases</small></div></div>
+      <div class="tool"><span class="tool__logo"><img src="https://cdn.simpleicons.org/postgresql" alt="" loading="lazy" onerror="this.parentNode.classList.add('mono');this.remove()"><em class="tool__mono">P</em></span><div><b>PostgreSQL</b><small>Databases</small></div></div>
+      <div class="tool"><span class="tool__logo"><img src="https://unpkg.com/@lobehub/icons-static-svg@latest/icons/meta-color.svg" alt="" loading="lazy" onerror="this.parentNode.classList.add('mono');this.remove()"><em class="tool__mono">F</em></span><div><b>FAISS</b><small>Vector databases</small></div></div>
+      <div class="tool"><span class="tool__logo tool__logo--svg"><svg viewBox="0 0 24 24" width="28" height="28"><circle cx="9" cy="9" r="6" fill="#FF6446" fill-opacity=".9"/><circle cx="15" cy="9" r="6" fill="#FFDE2D" fill-opacity=".9"/><circle cx="12" cy="15" r="6" fill="#327EFF" fill-opacity=".85"/></svg></span><div><b>ChromaDB</b><small>Vector databases</small></div></div>
+      <div class="tool"><span class="tool__logo"><img src="https://unpkg.com/@lobehub/icons-static-svg@latest/icons/langchain-color.svg" alt="" loading="lazy" onerror="this.parentNode.classList.add('mono');this.remove()"><em class="tool__mono">L</em></span><div><b>LangChain</b><small>AI frameworks</small></div></div>
+      <div class="tool"><span class="tool__logo"><img src="https://cdn.simpleicons.org/langgraph" alt="" loading="lazy" onerror="this.parentNode.classList.add('mono');this.remove()"><em class="tool__mono">L</em></span><div><b>LangGraph</b><small>Agent workflows</small></div></div>
+      <div class="tool"><span class="tool__logo"><img src="https://cdn.simpleicons.org/git" alt="" loading="lazy" onerror="this.parentNode.classList.add('mono');this.remove()"><em class="tool__mono">G</em></span><div><b>Git</b><small>Version control</small></div></div>
+      <div class="tool"><span class="tool__logo"><img src="https://cdn.simpleicons.org/github" alt="" loading="lazy" onerror="this.parentNode.classList.add('mono');this.remove()"><em class="tool__mono">G</em></span><div><b>GitHub</b><small>Version control</small></div></div>
+      <div class="tool"><span class="tool__logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecloud/googlecloud-original.svg" alt="" loading="lazy" onerror="this.parentNode.classList.add('mono');this.remove()"><em class="tool__mono">C</em></span><div><b>Cloud hosting</b><small>Deployment</small></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- OPPORTUNITIES -->
+<section class="sec sec--tint">
+  <div class="wrap">
+    <p class="eyebrow eyebrow--c">Beyond the classroom</p>
+    <h2 class="h2 h2--c">Learn. Build. Execute. <em>Get discovered.</em></h2>
+    <div class="opps">
+      <article><span>A</span><h3>Real product experience</h3><p>Contribute to Trafy&rsquo;s networking platform connecting students, professionals, founders, educators and recruiters.</p></article>
+      <article><span>B</span><h3>Resume sharing with FAANG</h3><p>Resumes of cohort performers are shared with FAANG companies for consideration.</p><small>Does not guarantee interviews, shortlisting or employment.</small></article>
+      <article><span>C</span><h3>MNC opportunities</h3><p>Top performers may get opportunities with leading MNCs, subject to selection, eligibility and availability.</p></article>
+      <article><span>D</span><h3>Investor interactions</h3><p>Promising product ideas may get a chance to be discussed with investors.</p><small>Funding is not guaranteed.</small></article>
+      <article class="opps__star"><span>E</span><h3>Paid internships at Trafy</h3><p>The top three performers get the opportunity to join Trafy as paid interns, based on performance, project quality, consistency and evaluation.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- OUTCOMES + WHO -->
+<section class="sec" id="outcomes">
+  <div class="wrap two">
+    <div>
+      <p class="eyebrow">Learning outcomes</p>
+      <h2 class="h2">By the end, you&rsquo;ll be able to&hellip;</h2>
+      <ol class="outs">
+        <li>Write Python programmes independently</li>
+        <li>Process and analyse datasets</li>
+        <li>Understand fundamental ML concepts</li>
+        <li>Train and evaluate basic ML models</li>
+        <li>Understand LLMs and Generative AI</li>
+        <li>Integrate AI models through APIs</li>
+        <li>Build backend applications with FastAPI</li>
+        <li>Work with SQL and PostgreSQL</li>
+        <li>Build interactive AI interfaces</li>
+        <li>Implement embeddings and semantic search</li>
+        <li>Develop RAG-based applications</li>
+        <li>Understand AI agents and tool calling</li>
+        <li>Build multi-step AI workflows</li>
+        <li>Deploy AI-powered applications</li>
+        <li>Maintain projects using Git and GitHub</li>
+        <li>Present and explain your own AI applications</li>
+      </ol>
+      <p class="fine">These are intended learning outcomes, not a guarantee of professional mastery or employment after 32 hours of live teaching.</p>
+    </div>
+    <div>
+      <p class="eyebrow">Who should join</p>
+      <h2 class="h2">Built for beginners and <em>career switchers.</em></h2>
+      <ul class="who">
+        <li>Students who want to enter Artificial Intelligence</li>
+        <li>Beginners who have never written code</li>
+        <li>Graduates interested in AI engineering</li>
+        <li>Working professionals exploring AI application development</li>
+        <li>Aspiring founders who want to build AI-powered products</li>
+        <li>Anyone interested in automation, LLMs and intelligent applications</li>
+      </ul>
+      <div class="promise"><strong>Our promise</strong><p>We provide the learning environment, technical guidance, practical challenges and opportunities to show your ability. What you build, and how far you take it, depends on your effort and execution.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec sec--tint" id="faq">
+  <div class="wrap wrap--narrow">
+    <p class="eyebrow eyebrow--c">Questions</p>
+    <h2 class="h2 h2--c">Frequently asked</h2>
+    <div class="faq">
+      <details><summary>Do I need to know coding or AI already?</summary><p>No. The cohort starts from Python fundamentals and progressively introduces more advanced AI engineering concepts.</p></details>
+      <details><summary>How much live teaching is there?</summary><p>16 live classes of 2 hours each, two a week over 8 weeks, which is 32+ hours of instructor-led teaching, plus weekly assignments and project work.</p></details>
+      <details><summary>What will I have built by the end?</summary><p>Three guided projects (an AI chatbot, a full-stack AI application and a RAG knowledge assistant) and an individual capstone application that you deploy and present.</p></details>
+      <details><summary>What is included for free?</summary><p>Free access to 30+ courses on the Trafy app and the Trafy Employability Index test, along with a Trafy profile to showcase your work.</p></details>
+      <details><summary>Does the cohort guarantee a job or interview?</summary><p>No. Resume sharing, MNC opportunities and investor interactions depend on selection, eligibility and performance, and none of them is guaranteed. We give you the environment and the opportunities to prove your ability.</p></details>
+      <details><summary>How do I get fee and batch details?</summary><p>Fill in the short form and a Trafy counsellor will share the details with you.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final" id="apply">
+  <div class="wrap final__in">
+    <h2>Ready to build your first AI product?</h2>
+    <p>Join the Trafy AI Engineer Cohort. Eight weeks, 32+ live hours, five real builds.</p>
+    <div class="hero__cta hero__cta--c">
+      <button type="button" class="btn btn--light btn--lg" data-open-lead data-intent="apply">Apply to the Cohort</button>
+      <button type="button" class="btn btn--outline-light btn--lg" data-open-lead>Download Curriculum <span aria-hidden="true">&darr;</span></button>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__in">
+    <a href="/cohort/" class="nav__logo"><img src="/cohort/assets/img/trafy-logo-ink.png" alt="Trafy"></a>
+    <p>TRAFY &mdash; Your skills are the story. Your network is the stage.</p>
+    <small>&copy; 2026 Trafy. All rights reserved. &middot; <a href="https://trafy.si/privacy">Privacy</a> &middot; <a href="https://trafy.si/terms">Terms</a></small>
+  </div>
+</footer>
+
+<div class="sticky" id="sticky">
+  <span><strong>AI Engineer Cohort</strong> 32+ live hours &middot; 5 real builds</span>
+  <div><button type="button" class="btn btn--ghost btn--sm" data-open-lead>Curriculum</button><button type="button" class="btn btn--solid btn--sm" data-open-lead data-intent="apply">Apply</button></div>
+</div>
+
+<!-- LEAD MODAL -->
+<div class="modal" id="leadModal" role="dialog" aria-modal="true" aria-labelledby="leadTitle" hidden>
+  <div class="modal__box">
+    <button type="button" class="modal__x" data-close-lead aria-label="Close">&times;</button>
+    <aside class="modal__art">
+      <img src="/cohort/assets/img/pitch-1.webp" alt="" loading="lazy">
+      <div class="modal__artcopy">
+        <p class="eyebrow">Trafy AI Engineer Cohort</p>
+        <h3>Get the full 8-week curriculum</h3>
+        <ul>
+          <li>16 classes, topic by topic</li>
+          <li>4 projects + individual capstone</li>
+          <li>Tech stack, evaluation and outcomes</li>
+        </ul>
+      </div>
+    </aside>
+    <div class="modal__form" id="leadFormWrap">
+      <h2 id="leadTitle">Download the curriculum</h2>
+      <p class="modal__sub">Tell us a little about yourself and the PDF downloads instantly. A Trafy counsellor may follow up.</p>
+      <form id="leadForm" novalidate>
+        <label>Full name *<input name="name" type="text" autocomplete="name" placeholder="Full name" required></label>
+        <label>Email *<input name="email" type="email" autocomplete="email" placeholder="you@example.com" required></label>
+        <div class="row">
+          <label>Phone *<span class="phone"><i>+91</i><input name="phone" type="tel" inputmode="numeric" autocomplete="tel-national" placeholder="10-digit number" maxlength="10" required></span></label>
+          <label>Graduation year *<select name="year" required><option value="">Select</option></select></label>
+        </div>
+        <fieldset><legend>Are you a working professional? *</legend>
+          <label class="radio"><input type="radio" name="pro" value="Yes" required> Yes</label>
+          <label class="radio"><input type="radio" name="pro" value="No"> No</label>
+        </fieldset>
+        <p class="err" id="leadErr" role="alert" hidden></p>
+        <button type="submit" class="btn btn--solid btn--lg btn--block">Download Curriculum &darr;</button>
+        <p class="modal__fine">Your details help us tailor guidance. We never sell your data.</p>
+      </form>
+    </div>
+    <div class="modal__form modal__done" id="leadDone" hidden>
+      <h2>You&rsquo;re in. Thank you!</h2>
+      <p class="modal__sub">Your download should start automatically. If it didn&rsquo;t, use the button below.</p>
+      <a class="btn btn--solid btn--lg btn--block" id="leadDl" href="/cohort/assets/downloads/trafy-ai-engineer-cohort-curriculum.pdf" download>Download Curriculum (PDF)</a>
+      <button type="button" class="link" data-close-lead>Back to the page</button>
+    </div>
+  </div>
+</div>
+
+<script>document.documentElement.classList.add("js")</script>
+<script src="/cohort/js/cohort.js"></script>
+<script src="/cohort/js/hero.js"></script>
+</body>
+</html>

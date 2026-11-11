@@ -1,0 +1,1 @@
+{"version":"0.0.1","configurations":[{"name":"cohort-trafy","runtimeExecutable":"node","runtimeArgs":["dev-server.js","."],"port":5055}]}
