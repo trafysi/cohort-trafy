@@ -6,6 +6,24 @@
   var LEAD_ENDPOINT = 'https://script.google.com/macros/s/AKfycbwAXcFJQgyGXdlkUqiQ1GgV-_dQgE8ntd2BfcLkFEZg-CFlG0-egyFvmTgrD3Rj6pZc/exec';
   var PDF = '/cohort/assets/downloads/trafy-ai-engineer-cohort-curriculum.pdf';
 
+
+  /* ---- analytics: works with Google Tag Manager (dataLayer) and gtag if you add them ---- */
+  function track(name, data) {
+    try {
+      data = data || {}; data.event = name;
+      (window.dataLayer = window.dataLayer || []).push(data);
+      if (typeof window.gtag === 'function') window.gtag('event', name, data);
+    } catch (e) {}
+  }
+  /* where did this visitor come from? utm_* wins, then the referrer, else direct */
+  function trafficSource() {
+    var saved = sload('trafy_src'); if (saved) return saved;
+    var q = new URLSearchParams(location.search), parts = ['utm_source', 'utm_medium', 'utm_campaign'].map(function (k) { return q.get(k); }).filter(Boolean);
+    var src = parts.length ? parts.join(' / ') : (document.referrer ? 'referral: ' + (function () { try { return new URL(document.referrer).hostname; } catch (e) { return 'unknown'; } })() : 'direct');
+    sstore('trafy_src', src); return src;
+  }
+  trafficSource();
+
   var modal = document.getElementById('leadModal');
   var form = document.getElementById('leadForm');
   var formWrap = document.getElementById('leadFormWrap');
@@ -24,6 +42,7 @@
 
   function open(intent) {
     lastFocus = document.activeElement;
+    track('lead_popup_open', { trigger: intent || 'button' });
     var submitted = load('trafy_lead_submitted') === '1';
     formWrap.hidden = false; done.hidden = true;
     if (submitted && !intent) { startDownload(); return; }
@@ -39,7 +58,7 @@
   function startDownload() {
     var a = document.createElement('a');
     a.href = PDF; a.download = 'Trafy-AI-Engineer-Cohort-Curriculum.pdf';
-    document.body.appendChild(a); a.click(); a.remove();
+    document.body.appendChild(a); a.click(); a.remove(); track('curriculum_download');
   }
 
   document.addEventListener('click', function (e) {
@@ -68,12 +87,13 @@
 
     var lead = {
       name: name, email: email, phone: '+91' + phone, graduationYear: f.year.value, workingProfessional: pro.value,
-      page: location.pathname, source: (document.referrer ? 'referral' : 'direct'), at: new Date().toISOString()
+      page: location.pathname, source: trafficSource(), at: new Date().toISOString()
     };
     try {
       var all = JSON.parse(load('trafy_leads') || '[]'); all.push(lead); store('trafy_leads', JSON.stringify(all));
     } catch (er) { }
     store('trafy_lead_submitted', '1');
+    track('lead_submitted', { graduation_year: f.year.value, working_professional: pro.value, source: lead.source });
     if (LEAD_ENDPOINT) {
       try { fetch(LEAD_ENDPOINT, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify(lead), keepalive: true }); } catch (er) { }
     }
@@ -209,8 +229,9 @@
 
   /* scroll progress + active nav link + nav shadow */
   var prog = document.getElementById('progress'), nav = document.getElementById('nav');
+  if (!prog || !nav) { prog = document.createElement('i'); nav = document.createElement('i'); }
   var links = Array.prototype.slice.call(document.querySelectorAll('.nav__links a'));
-  var secs = links.map(function (a) { return document.querySelector(a.getAttribute('href')); });
+  var secs = links.map(function (a) { var h = a.getAttribute('href'); try { return h && h.charAt(0) === '#' ? document.querySelector(h) : null; } catch (e) { return null; } });
   function scrollFx() {
     var h = document.documentElement.scrollHeight - innerHeight;
     prog.style.transform = 'scaleX(' + (h > 0 ? scrollY / h : 0) + ')';
@@ -221,7 +242,7 @@
   window.addEventListener('scroll', scrollFx, { passive: true }); scrollFx();
 
   /* sticky bar after the hero */
-  var sticky = document.getElementById('sticky');
+  var sticky = document.getElementById('sticky') || document.createElement('i');
   function onScroll() { sticky.classList.toggle('on', window.scrollY > 640); }
   window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
 })();

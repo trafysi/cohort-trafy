@@ -3,212 +3,113 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Trafy Journal: News &amp; Articles</title>
-<meta name="description" content="News, launch updates and build-diary stories from inside the Trafy AI Cohort.">
-<!-- Link preview (WhatsApp, LinkedIn, X, Slack...) -->
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="Trafy">
-<meta property="og:title" content="Trafy Journal: News &amp; Articles">
-<meta property="og:description" content="News, launch updates and build-diary stories from inside the Trafy AI Cohort.">
-<link rel="canonical" href="https://trafy.si/cohort/blog">
-<meta property="og:url" content="https://trafy.si/cohort/blog">
+<title>Trafy Journal | News &amp; Stories</title>
+<meta name="description" content="Launch announcements, build diaries and recaps from inside Trafy cohorts.">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Trafy">
+<meta property="og:title" content="Trafy Journal | News &amp; Stories"><meta property="og:description" content="Launch announcements, build diaries and recaps from inside Trafy cohorts.">
 <meta property="og:image" content="https://trafy.si/cohort/assets/img/og-image.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Trafy: Learn by Building">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Trafy Journal: News &amp; Articles">
-<meta name="twitter:description" content="News, launch updates and build-diary stories from inside the Trafy AI Cohort.">
-<meta name="twitter:image" content="https://trafy.si/cohort/assets/img/og-image.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/cohort/assets/img/favicon-32.png">
-<link rel="icon" type="image/png" sizes="48x48" href="/cohort/assets/img/favicon-48.png">
 <link rel="icon" type="image/png" sizes="64x64" href="/cohort/assets/img/favicon-64.png">
-<link rel="apple-touch-icon" href="/cohort/assets/img/favicon-64.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400..800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/cohort/css/style.css">
+<link rel="stylesheet" href="/cohort/css/cohort.css">
+<link rel="stylesheet" href="/cohort/css/hero.css">
+<link rel="stylesheet" href="/cohort/css/sections.css">
+<link rel="stylesheet" href="/cohort/css/pages.css">
 </head>
 <body>
-<a class="skip-link" href="#main">Skip to main content</a>
-
-<!-- ============ NAV ============ -->
+<a class="skip" href="#main">Skip to main content</a>
+<div class="strip">Applications open &middot; Limited seats &middot; <button type="button" data-open-lead>Download the curriculum</button></div>
 <header class="nav" id="nav">
-  <div class="nav__inner">
-    <a href="/cohort" class="nav__logo">
-      <img src="/cohort/assets/img/trafy-logo-ink.png" alt="Trafy" class="nav__logo-img">
-    </a>
-
+  <div class="wrap nav__in">
+    <a href="/cohort/" class="nav__logo"><img src="/cohort/assets/img/trafy-logo-ink.png" alt="Trafy"></a>
     <nav class="nav__links" aria-label="Primary">
-      <a href="/cohort/cohort-26">Cohort &apos;26</a>
+      <a href="/cohort/#curriculum">Curriculum</a>
+      <a href="/cohort/#projects">Projects</a>
+      <a href="/cohort/#perks">What you get</a>
       <a href="/cohort/employability-index">Employability Index</a>
-      <a href="/cohort/trafy-startup">Trafy Startup</a>
+      <a href="/cohort/trafy-startup">Startup track</a>
+      <a href="/cohort/blog" class="on" aria-current="page">Journal</a>
+      <a href="/cohort/#faq">FAQ</a>
     </nav>
-
-    <div class="nav__actions">
-      <a href="/cohort#apply" class="btn btn--primary btn--sm nav__cta">Apply to Cohort &apos;26</a>
+    <div class="nav__cta">
+      <button type="button" class="btn btn--ghost btn--sm" data-open-lead>Download Curriculum</button>
+      <a href="/cohort/#apply" class="btn btn--solid btn--sm">Apply Now</a>
     </div>
-
-    <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
   </div>
-
-  <div class="nav__mobile" id="navMobile">
-    <a href="/cohort/cohort-26">Cohort &apos;26</a>
-    <a href="/cohort/employability-index">Employability Index</a>
-    <a href="/cohort/trafy-startup">Trafy Startup</a>
-    <a href="/cohort#apply" class="btn btn--primary btn--sm">Apply to Cohort &apos;26</a>
-  </div>
+  <div class="progress" id="progress"></div>
 </header>
-
-<div class="sticky-cta" id="stickyCta">
-  <span class="sticky-cta__text"><strong>Cohort &apos;26 is open</strong><span>31/40 seats · Closes Nov 5</span></span>
-  <a href="/cohort#apply" class="btn btn--primary btn--md">Apply Now</a>
-</div>
-
 <main id="main">
 
-<!-- ============ JOURNAL HEADER ============ -->
-<section class="journal-head">
-  <div class="section-inner">
-    <p class="eyebrow eyebrow--light">Trafy Journal</p>
-    <h1 class="journal-head__title">News, updates &amp; stories from inside the cohort</h1>
-    <p class="journal-head__copy">Launch announcements, build-diary entries and honest recaps from the people running, and building through, Trafy Cohort &apos;25 and &apos;26.</p>
+<section class="phead phead--c">
+  <div class="wrap wrap--narrow">
+    <p class="eyebrow eyebrow--c">Trafy Journal</p>
+    <h1>News, updates &amp; stories from <em>inside the cohort</em></h1>
+    <p class="lead">Launch announcements, build-diary entries and honest recaps from the people running, and building through, Trafy cohorts.</p>
   </div>
 </section>
-
-<!-- ============ ARTICLES ============ -->
-<section class="article-list" aria-label="Articles">
-  <div class="section-inner">
-
-    <article class="article" id="learn-by-building-cohort">
-      <div class="article__meta">
-        <span class="news__card-tag news__card-tag--dark">Press</span>
-        <span class="article__date">Aug 15, 2026 · 4 min read</span>
-      </div>
-      <a href="/cohort/blog-learn-by-building-cohort">
-        <h2 class="article__title">Trafy launches world&apos;s first &quot;Learn by Building&quot; cohort for AI engineers</h2>
-        <div class="article__media">
-          <img src="/cohort/assets/img/news-feature-2026.webp" alt="Trafy launches world's first Learn by Building cohort, via Business Networks" loading="lazy" decoding="async">
-        </div>
-      </a>
-      <div class="article__body">
-        <p>Trafy has opened applications for Cohort &apos;26, a six-month, fully online program built entirely around one idea: the fastest way to learn to build with AI is to actually build something, with founders, for real users, under a real deadline.</p>
-        <a class="link-arrow article__excerpt-link" href="/cohort/blog-learn-by-building-cohort">Read full article <span>→</span></a>
-      </div>
-    </article>
-
-    <hr class="article__divider">
-
-    <article class="article" id="employability-index-first">
-      <div class="article__meta">
-        <span class="news__card-tag news__card-tag--dark">Milestone</span>
-        <span class="article__date">Sept 2, 2026 · 4 min read</span>
-      </div>
-      <a href="/cohort/blog-employability-index-first">
-        <h2 class="article__title">Trafy becomes the first company in the world to introduce an Employability Index</h2>
-        <div class="article__media">
-          <img src="/cohort/assets/img/ei-first-in-world-2026.webp" alt="Trafy: the first company in the world to introduce the Employability Index" loading="lazy" decoding="async">
-        </div>
-      </a>
-      <div class="article__body">
-        <p>Trafy has introduced the Employability Index, a single, verifiable score that measures how ready a candidate actually is to contribute from day one, making it the first company anywhere to formalise hiring readiness into one composite number instead of a resume, a college name and a gut-feel interview.</p>
-        <a class="link-arrow article__excerpt-link" href="/cohort/blog-employability-index-first">Read full article <span>→</span></a>
-      </div>
-    </article>
-
-    <hr class="article__divider">
-
-    <article class="article" id="week-3-mvp-sprint">
-      <div class="article__meta">
-        <span class="news__card-tag news__card-tag--dark">Journal</span>
-        <span class="article__date">Mar 3, 2026 · 3 min read</span>
-      </div>
-      <a href="/cohort/blog-week-3-mvp-sprint">
-        <h2 class="article__title">Inside Week 3: how five teams shipped MVPs in four days</h2>
-        <div class="article__media">
-          <img src="/cohort/assets/img/founders-meet-2025.webp" alt="Trafy Cohort '25 Founders Meet panel discussion" loading="lazy" decoding="async">
-        </div>
-      </a>
-      <div class="article__body">
-        <p>By the start of Week 3, every team in Cohort &apos;25 had a validated problem and a rough plan. What they didn't have yet was a product anyone could actually use, and they had four days to fix that.</p>
-        <a class="link-arrow article__excerpt-link" href="/cohort/blog-week-3-mvp-sprint">Read full article <span>→</span></a>
-      </div>
-    </article>
-
-    <hr class="article__divider">
-
-    <article class="article" id="cohort25-funding-recap">
-      <div class="article__meta">
-        <span class="news__card-tag news__card-tag--dark">Journal</span>
-        <span class="article__date">Apr 18, 2026 · 5 min read</span>
-      </div>
-      <a href="/cohort/blog-cohort25-funding-recap">
-        <h2 class="article__title">From prototype to funded startup: what Cohort &apos;25 taught us about traction</h2>
-        <div class="article__media">
-          <img src="/cohort/assets/img/pitch-2.webp" alt="Trafy founders pitching at Cohort 25 Pitch Day" loading="lazy" decoding="async">
-        </div>
-      </a>
-      <div class="article__body">
-        <p>When Cohort &apos;25 wrapped, the numbers surprised even the mentors who'd been in the room every week: over ₹1 Cr in grants allocated to student startups, 25+ VC meetings booked for selected teams, and seven startups that went straight from cohort project to incubation.</p>
-        <a class="link-arrow article__excerpt-link" href="/cohort/blog-cohort25-funding-recap">Read full article <span>→</span></a>
-      </div>
-    </article>
-
-  </div>
-</section>
-
+<section class="sec" style="padding-top:20px"><div class="wrap"><div class="posts"><a class="post" href="/cohort/blog-learn-by-building-cohort"><div class="post__img"><img src="/cohort/assets/img/news-feature-2026.webp" alt="Trafy launches world's first Learn by Building cohort, via Business Networks" loading="lazy"></div><div class="post__body"><div class="post__meta"><span class="tagx">Press</span><span>Aug 15, 2026 · 4 min read</span></div><h3>Trafy launches world's first "Learn by Building" cohort for AI engineers</h3><p>Trafy has opened applications for Cohort '26, a six-month, fully online program built entirely around one idea: the fastest way to learn to build with AI is to actually…</p><span class="post__more">Read article &rarr;</span></div></a><a class="post" href="/cohort/blog-employability-index-first"><div class="post__img"><img src="/cohort/assets/img/ei-first-in-world-2026.webp" alt="Trafy: the first company in the world to introduce the Employability Index" loading="lazy"></div><div class="post__body"><div class="post__meta"><span class="tagx">Milestone</span><span>Sept 2, 2026 · 4 min read</span></div><h3>Trafy becomes the first company in the world to introduce an Employability Index</h3><p>Trafy has introduced the Employability Index, a single, verifiable score that measures how ready a candidate actually is to contribute from day one, making it the first…</p><span class="post__more">Read article &rarr;</span></div></a><a class="post" href="/cohort/blog-week-3-mvp-sprint"><div class="post__img"><img src="/cohort/assets/img/founders-meet-2025.webp" alt="Trafy Cohort '25 Founders Meet panel discussion" loading="lazy"></div><div class="post__body"><div class="post__meta"><span class="tagx">Journal</span><span>Mar 3, 2026 · 3 min read</span></div><h3>Inside Week 3: how five teams shipped MVPs in four days</h3><p>By the start of Week 3, every team in Cohort '25 had a validated problem and a rough plan. What they didn't have yet was a product anyone could actually use, and they…</p><span class="post__more">Read article &rarr;</span></div></a><a class="post" href="/cohort/blog-cohort25-funding-recap"><div class="post__img"><img src="/cohort/assets/img/pitch-2.webp" alt="Trafy founders pitching at Cohort 25 Pitch Day" loading="lazy"></div><div class="post__body"><div class="post__meta"><span class="tagx">Journal</span><span>Apr 18, 2026 · 5 min read</span></div><h3>From prototype to funded startup: what Cohort '25 taught us about traction</h3><p>When Cohort '25 wrapped, the numbers surprised even the mentors who'd been in the room every week: over ₹1 Cr in grants allocated to student startups, 25+ VC meetings…</p><span class="post__more">Read article &rarr;</span></div></a></div></div></section><section class="final"><div class="wrap final__in"><h2>Want to be in the next story?</h2><p>Build with us in the AI Engineer Cohort.</p><div class="hero__cta hero__cta--c"><button type="button" class="btn btn--solid btn--lg" data-open-lead data-intent="apply">Apply to the Cohort</button><button type="button" class="btn btn--outline-light btn--lg" data-open-lead>Download Curriculum <span aria-hidden="true">&darr;</span></button></div></div></section>
 </main>
-
-<!-- ============ FOOTER ============ -->
-<footer class="footer">
-  <div class="section-inner footer__grid">
-    <div class="footer__brand">
-      <a href="/cohort" class="nav__logo footer__logo">
-        <img src="/cohort/assets/img/trafy-logo-ink.png" alt="Trafy" class="nav__logo-img">
-      </a>
-      <p class="footer__tag">LEARN. BUILD. LAUNCH.<br>A community for Founders, Builders &amp; Future Ready Minds.</p>
-    </div>
-
-    <nav class="footer__col" aria-label="Program">
-      <h2>Program</h2>
-      <a href="/cohort/cohort-26">Cohort &apos;26 Curriculum</a>
-      <a href="/cohort#next-cohort">Next Cohort</a>
-      <a href="/cohort#timeline">Program Timeline</a>
-      <a href="/cohort/trafy-startup">Startup Funding</a>
-      <a href="/cohort/employability-index">Employability Index</a>
-      <a href="/cohort#why-trafy">Why Trafy</a>
-    </nav>
-
-    <nav class="footer__col" aria-label="Company">
-      <h2>Company</h2>
-      <a href="/cohort#success">Success Stories</a>
-      <a href="/cohort/blog">News &amp; Blog</a>
-      <a href="/cohort#iit-madras">IIT Madras Program</a>
-      <a href="/cohort#apply">Apply</a>
-    </nav>
-
-    <nav class="footer__col" aria-label="Connect">
-      <h2>Connect</h2>
-      <a href="#">trafy.si</a>
-      <a href="#">LinkedIn</a>
-      <a href="#">Instagram</a>
-      <a href="#">YouTube</a>
-    </nav>
-  </div>
-
-  <div class="section-inner footer__bottom">
-    <span>© 2026 Trafy. All rights reserved.</span>
-    <div class="footer__legal">
-      <a href="https://trafy.si/privacy">Privacy Policy</a>
-      <a href="https://trafy.si/terms">Terms of Service</a>
-    </div>
+<footer class="foot">
+  <div class="wrap foot__in">
+    <a href="/cohort/" class="nav__logo"><img src="/cohort/assets/img/trafy-logo-ink.png" alt="Trafy"></a>
+    <p>TRAFY &mdash; Your skills are the story. Your network is the stage.</p>
+    <nav class="foot__links" aria-label="More"><a href="/cohort/#curriculum">Curriculum</a><a href="/cohort/employability-index">Employability Index</a><a href="/cohort/trafy-startup">Startup track</a><a href="/cohort/blog">Journal</a></nav>
+    <small>&copy; 2026 Trafy. All rights reserved. &middot; <a href="https://trafy.si/privacy">Privacy</a> &middot; <a href="https://trafy.si/terms">Terms</a></small>
   </div>
 </footer>
+<div class="sticky" id="sticky">
+  <span><strong>AI Engineer Cohort</strong> 32+ live hours &middot; 5 real builds</span>
+  <div><button type="button" class="btn btn--ghost btn--sm" data-open-lead>Curriculum</button><button type="button" class="btn btn--solid btn--sm" data-open-lead data-intent="apply">Apply</button></div>
+</div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-<script src="/cohort/js/main.js?v=2"></script>
+<!-- LEAD MODAL -->
+<div class="modal" id="leadModal" role="dialog" aria-modal="true" aria-labelledby="leadTitle" hidden>
+  <div class="modal__box">
+    <button type="button" class="modal__x" data-close-lead aria-label="Close">&times;</button>
+    <aside class="modal__art">
+      <img src="/cohort/assets/img/pitch-1.webp" alt="" loading="lazy">
+      <div class="modal__artcopy">
+        <p class="eyebrow">Trafy AI Engineer Cohort</p>
+        <h3>Get the full 8-week curriculum</h3>
+        <ul>
+          <li>16 classes, topic by topic</li>
+          <li>4 projects + individual capstone</li>
+          <li>Tech stack, evaluation and outcomes</li>
+        </ul>
+      </div>
+    </aside>
+    <div class="modal__form" id="leadFormWrap">
+      <h2 id="leadTitle">Download the curriculum</h2>
+      <p class="modal__sub">Tell us a little about yourself and the PDF downloads instantly. A Trafy counsellor may follow up.</p>
+      <form id="leadForm" novalidate>
+        <label>Full name *<input name="name" type="text" autocomplete="name" placeholder="Full name" required></label>
+        <label>Email *<input name="email" type="email" autocomplete="email" placeholder="you@example.com" required></label>
+        <div class="row">
+          <label>Phone *<span class="phone"><i>+91</i><input name="phone" type="tel" inputmode="numeric" autocomplete="tel-national" placeholder="10-digit number" maxlength="10" required></span></label>
+          <label>Graduation year *<select name="year" required><option value="">Select</option></select></label>
+        </div>
+        <fieldset><legend>Are you a working professional? *</legend>
+          <label class="radio"><input type="radio" name="pro" value="Yes" required> Yes</label>
+          <label class="radio"><input type="radio" name="pro" value="No"> No</label>
+        </fieldset>
+        <p class="err" id="leadErr" role="alert" hidden></p>
+        <button type="submit" class="btn btn--solid btn--lg btn--block">Download Curriculum &darr;</button>
+        <p class="modal__fine">Your details help us tailor guidance. We never sell your data.</p>
+      </form>
+    </div>
+    <div class="modal__form modal__done" id="leadDone" hidden>
+      <h2>Thank you! Your curriculum is on its way.</h2>
+      <p class="modal__sub">Your download should start automatically. If it didn&rsquo;t, use the button below.</p>
+      <ol class="next"><li><b>Read the curriculum.</b> 8 phases, 16 classes, topic by topic.</li><li><b>Expect a call.</b> A Trafy counsellor will reach out on the number you shared.</li><li><b>Apply when you&rsquo;re ready.</b> No coding experience needed.</li></ol>
+      <a class="btn btn--solid btn--lg btn--block" id="leadDl" href="/cohort/assets/downloads/trafy-ai-engineer-cohort-curriculum.pdf" download>Download Curriculum (PDF)</a>
+      <button type="button" class="link" data-close-lead>Back to the page</button>
+    </div>
+  </div>
+</div>
+
+<script>document.documentElement.classList.add("js")</script>
+<script src="/cohort/js/cohort.js"></script>
 </body>
 </html>
