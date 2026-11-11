@@ -24,6 +24,12 @@
   }
   trafficSource();
 
+
+  function recentlySubmitted() {
+    var t = parseInt(load('trafy_lead_submitted') || '0', 10);
+    return t > 0 && Date.now() - t < 14 * 24 * 3600 * 1000;
+  }
+
   var modal = document.getElementById('leadModal');
   var form = document.getElementById('leadForm');
   var formWrap = document.getElementById('leadFormWrap');
@@ -43,7 +49,7 @@
   function open(intent) {
     lastFocus = document.activeElement;
     track('lead_popup_open', { trigger: intent || 'button' });
-    var submitted = load('trafy_lead_submitted') === '1';
+    var submitted = recentlySubmitted();
     formWrap.hidden = false; done.hidden = true;
     if (submitted && !intent) { startDownload(); return; }
     modal.hidden = false;
@@ -92,7 +98,7 @@
     try {
       var all = JSON.parse(load('trafy_leads') || '[]'); all.push(lead); store('trafy_leads', JSON.stringify(all));
     } catch (er) { }
-    store('trafy_lead_submitted', '1');
+    store('trafy_lead_submitted', String(Date.now()));
     track('lead_submitted', { graduation_year: f.year.value, working_professional: pro.value, source: lead.source });
     if (LEAD_ENDPOINT) {
       try { fetch(LEAD_ENDPOINT, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify(lead), keepalive: true }); } catch (er) { }
@@ -102,7 +108,10 @@
   });
 
   /* auto-open once per visit, shortly after the page loads */
-  if (sload('trafy_popup_seen') !== '1' && load('trafy_lead_submitted') !== '1') {
+  /* the pop-up opens on every new visit; it stays quiet for 14 days after someone submits the form.
+     Add ?popup=1 to the address to force it (handy for testing). */
+  var forcePopup = /[?&]popup=1/.test(location.search);
+  if (forcePopup || (sload('trafy_popup_seen') !== '1' && !recentlySubmitted())) {
     setTimeout(function () {
       if (modal.hidden) { sstore('trafy_popup_seen', '1'); open('auto'); }
     }, 2500);
@@ -217,14 +226,14 @@
   }
 
   /* tool-logo marquee built from the grid */
-  var track = document.querySelector('.marquee__track');
-  if (track) {
+  var marqueeTrack = document.querySelector('.marquee__track');
+  if (marqueeTrack) {
     var pills = '';
     document.querySelectorAll('.stack .tool').forEach(function (t) {
       pills += '<span class="pill">' + t.querySelector('.tool__logo').outerHTML + t.querySelector('b').textContent + '</span>';
     });
-    track.innerHTML = pills + pills;
-    track.querySelectorAll('img').forEach(function (im) { im.addEventListener('error', function () { im.parentNode.classList.add('mono'); im.remove(); }); });
+    marqueeTrack.innerHTML = pills + pills;
+    marqueeTrack.querySelectorAll('img').forEach(function (im) { im.addEventListener('error', function () { im.parentNode.classList.add('mono'); im.remove(); }); });
   }
 
   /* scroll progress + active nav link + nav shadow */
