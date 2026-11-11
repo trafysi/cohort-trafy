@@ -230,3 +230,4 @@
   .pho{min-height:260px}.pho--a,.pho--d{grid-column:1/3;grid-row:auto}.pho--b,.pho--c{grid-column:auto;grid-row:auto}
 }
 @media (max-width:560px){.mosaic{grid-template-columns:1fr}.pho--b,.pho--c{grid-column:1}.pho figcaption{max-width:none}}
+.faqcat{margin:36px 0 -8px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--pink-strong);font-weight:800}.faqcat:first-of-type{margin-top:28px}
